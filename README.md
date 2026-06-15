@@ -6,6 +6,10 @@ This repository contains a real-time, multi-camera spatial tracking system desig
 
 The project is currently under active development with a focus on optimizing multi-stream synchronization and hardening identity association in high-density environments.
 
+## Preview
+
+<img width="700" height="390" alt="Screen Recording 2026-06-12 155754 - Trim" src="https://github.com/user-attachments/assets/717a3848-4007-47d3-9cf2-ff2991af677b" />
+
 ---
 
 ## System Architecture
@@ -51,10 +55,6 @@ Instead of running sequential inference loops per camera stream, the architectur
 * `extrinsics.pkl`: Serialized storage containing the camera calibration data generated through the checkerboard analysis.
 
 ---
-
-## Preview
-
-<img width="700" height="390" alt="Screen Recording 2026-06-12 155754 - Trim" src="https://github.com/user-attachments/assets/717a3848-4007-47d3-9cf2-ff2991af677b" />
 
 ## Prerequisites
 
