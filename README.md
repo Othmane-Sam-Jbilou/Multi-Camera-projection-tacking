@@ -16,7 +16,7 @@ The project is currently under active development with a focus on optimizing mul
 The pipeline is structured into four main operational stages:
 
 1. **Multi-Stream Frame Ingestion:** Lightweight background worker threads capture video frames via GStreamer pipelines to minimize CPU overhead. Frames are managed via non-blocking queues configured to drop stale data to prevent stream lag. (we're only using video files for simulation, otherwise you gonna need to capture the camera streams using gstreamer or ffmpeg)
-2. **Batched Pose Inference:** Inputs are resized and batched dynamically into a single inference tensor fed to a YOLO-Pose engine executing on NVIDIA CUDA (inference batchsize = 2 * num of cameras).
+2. **Batched Pose Inference:** Inputs are resized and batched dynamically into a single inference tensor fed to a YOLO-Pose engine executing on NVIDIA CUDA 
 3. **Geospatial Projection (Inverse Homography):** 2D image coordinates representing human foot positions (calculated as the midpoint between the left and right ankle keypoints) are undistorted using camera parameters and projected onto the physical floor plane ($Z=0$) utilizing an inverse homography matrix ($H^{-1}$).
 4. **Data Fusion & Spatial Tracking:** Disparate coordinate inputs mapping to the same physical target are clustered into a unified centroid. This centroid is ingested by a state-space tracking system that models human kinematics.
 
