@@ -52,6 +52,10 @@ Instead of running sequential inference loops per camera stream, the architectur
 
 ---
 
+## Preview
+
+<img width="400" height="225" alt="Screen Recording 2026-06-12 155754 - Trim" src="https://github.com/user-attachments/assets/717a3848-4007-47d3-9cf2-ff2991af677b" />
+
 ## Prerequisites
 
 ### Dependencies
